@@ -1,0 +1,64 @@
+
+{include file="sqlsec/header" /}  
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  {include file="sqlsec/cata" /}  
+  
+</ul>
+
+{include file="sqlsec/catanext" /}  
+
+        </div>
+    </nav>
+
+</header>
+
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+{include file="sqlsec/middle" /}  
+    </div>
+</div>
+
+<main class="content">
+
+    
+
+<div id="category-cloud" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;友情链接
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+  <article id="articles" class="container articles">
+        <div class="row tags-posts">
+        	
+{query  table="link" field="link_name,url,link_img" sqlstr="1=1"}
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="{$query.url}" target="_blank">
+                        <div class="card-image tag-image">
+                            
+                            <img src="{:config('depyseve.site_logo')}" class="responsive-img" alt="{$query.link_name}">
+                            <span class="card-title">{$query.link_name}</span>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+           {/query} 
+            
+
+     
+            
+        </div>
+    </article>
+</main>
+
+{include file="sqlsec/footer" /}   

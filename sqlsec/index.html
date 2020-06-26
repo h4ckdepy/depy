@@ -1,0 +1,123 @@
+
+{include file="sqlsec/mainheader" /}    
+
+{include file="sqlsec/middle" /}
+
+            <div class="cover-btns">
+                <a href="#indexCard" class="waves-effect waves-light btn">
+                    <i class="fas fa-angle-double-down"></i>开始阅读
+                </a>
+
+                
+            </div>
+            <div class="cover-social-link">
+
+    <a href="mailto:i@happysec.cn" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+</div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script>
+$(function () {
+    let coverSlider = $('.carousel');
+    coverSlider.carousel({
+        duration: Number('120'),
+        fullWidth: true,
+        indicators: 'false' === 'true'
+    });
+
+    let carouselIntervalId;
+    
+
+    let restartPlay = function () {
+        
+    };
+
+    
+});
+</script>
+
+
+
+<main class="content">
+
+    <div id="indexCard" class="index-card">
+        <div class="container ">
+            <div class="card">
+                <div class="card-content">
+                    
+                        <div class="dream">
+    
+    <div class="title center-align">
+        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;博客简介
+    </div>
+    
+    <div class="row">
+        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
+            {:config('depyseve.blogintro')}
+        </div>
+    </div>
+</div>
+                    
+
+                    
+
+                    
+
+                    <div id="recommend-sections" class="recommend">
+                        
+
+
+
+
+
+<div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;置顶文章</div>
+
+<div class="row">
+
+  
+    
+    {include file="sqlsec/list_up" /}  
+
+    
+
+</div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+<center><div class="title"><i class="far fa-thumbs-up"></i>&nbsp;&nbsp;最新文章</div></center>
+<!--这里是文章卡片-->
+    <article id="articles" class="container articles">
+        <div class="row article-row">
+            
+                {include file="sqlsec/listindex" /}  
+        </div>
+    </article>
+   </main> 
+
+    
+
+
+<center><div class="title">更多文章请去分类列表查看</div></center>
+
+
+
+
+{include file="sqlsec/footer" /}    
+
+

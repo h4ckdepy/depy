@@ -1,0 +1,72 @@
+ <footer class="page-footer footer-bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+
+            <a href="https://blog.happysec.cn" target="_blank">小北</a>
+            |&nbsp;Powered by&nbsp;<a href="https://blog.happysec.cn/index/depyseve" target="_blank" rel="nofollow">depyseve</a>
+            |&nbsp;Theme&nbsp;<a rel="nofollow">Matery</a>
+            <br>
+            <script src="{:config('depyseve.site_staticurl')}/depy/activate-power-mode.min.js"></script>
+            <script>
+                POWERMODE.colorful = true;
+                POWERMODE.shake = false;
+                document.body.addEventListener('input', POWERMODE);
+            </script>   
+            
+            <span id="icp">
+                <a href="http://beian.miit.gov.cn" target="_blank" rel="nofollow">{:config('depyseve.copyright')}</a>
+            </span>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+    <a href="mailto:i@happysec.cn" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+    <a href="http://api.happysec.cn" class="tooltipped" target="_blank" data-tooltip="API" data-position="top" data-delay="50">
+        <i class="fas fa-sitemap"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <form method="get" action="/index/search">
+            <input type="search" id="searchInput" name="keyword" placeholder="请输入搜索的关键字"
+                   class="search-input">
+                   </form>
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="{:config('depyseve.site_staticurl')}/depy/materialize.min.js"></script>
+    <script src="{:config('depyseve.site_staticurl')}/depy/masonry.pkgd.min.js"></script>
+    <script src="{:config('depyseve.site_staticurl')}/depy/aos.js"></script>
+    <script src="{:config('depyseve.site_staticurl')}/depy/scrollProgress.min.js"></script>
+    <script src="{:config('depyseve.site_staticurl')}/depy/lightgallery-all.min.js"></script>
+    <script src="{:config('depyseve.site_staticurl')}/depy/matery.js"></script>
+    <script src="{:config('depyseve.site_staticurl')}/depy/clicklove.js" async="async"></script>
+    <script async src="{:config('depyseve.site_staticurl')}/depy/busuanzi.pure.mini.js"></script>
+    <script src="{:config('depyseve.site_staticurl')}/depy/instantpage.js" type="module"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+{query  table="content" field="title,pic,class_id,content_id,create_time,description" num="9" order="content_id desc" sqlstr="status=1 and position!=2"}
+  <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="index/view/{$query.content_id}.html">
+                        <div class="card-image">
+                            
+                            <img src="https://p1.music.126.net/2bzhpySbp1CrgP_t_XYCOg==/109951165086321796" class="responsive-img" alt="{$query.title}">
+                            
+                            <span class="card-title">{$query.title}</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div>
+                             {if $query.description != null and session('admin.status') !=1}
+                             <span style="color:red">内容已经加密</span>
+                             {else /}
+                             本文为公开内容
+                             {/if}
+                        </div>
+                        
+                        {assign name="classcontent" value=":$query.class_id"}
+                         {class sqlstr="class_id=$classcontent"}
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>{$query.create_time|date="Y年m月d日"}
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="{$class.url}" class="post-category">
+                                    {$class.class_name}
+                                </a>
+                                {/class}
+                                
+                            </span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+{/query} 

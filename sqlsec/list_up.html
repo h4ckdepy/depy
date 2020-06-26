@@ -1,0 +1,22 @@
+{query  table="content" field="title,pic,class_id,content_id" num="9" sqlstr="status=1 and position =2"}
+    <div class="col s12 m6" >
+        <div class="post-card" style="background-image: url('https://image.3001.net/images/20200409/15864384423326.jpg')">
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                    <a class="category">置顶文章</a>
+                    
+                </div>
+                <a href="index/view/{$query.content_id}.html">
+                    <h3 class="post-title">{$query.title}</h3>
+                </a>
+                <p class="post-description">
+                    
+                </p>
+                <a href="/index/view/{$query.content_id}.html" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+         </div>
+{/query} 

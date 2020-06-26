@@ -1,0 +1,128 @@
+
+{include file="sqlsec/header" /}  
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  {include file="sqlsec/cata" /}  
+  
+</ul>
+
+{include file="sqlsec/catanext" /}  
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+{include file="sqlsec/middle" /}  
+
+
+    </div>
+</div>
+
+<main class="content">
+
+    
+
+<div id="category-cloud" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
+            </div>
+            <div class="tag-chips">
+                
+                
+                	          
+            	   {class sqlstr="pid=23"}
+                 {if condition="$class.class_id eq $classid"}
+                <a href="{$class.url}" title="Python: 9">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            style="background-color: #E8F8F5;">{$class.class_name}
+                    </span>
+                </a>
+                   
+                   {else /}
+                <a href="{$class.url}" title="Others: 29">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F9EBEA;">{$class.class_name}
+                    </span>
+                </a>               
+                    {/if}
+   					{/class}             
+
+
+
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+  <article id="articles" class="container articles">
+        <div class="row tags-posts">
+        	
+        	
+
+           
+            
+ 
+     {list  order="sortid desc" sqlstr="status=1" field="position,description"} 
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="{$list.url}">
+                        <div class="card-image tag-image">
+                            
+                            <img src="https://image.3001.net/images/20200304/15832956271308.jpg" class="responsive-img" alt="{$list.title}">
+                          
+                            <span class="card-title">{$list.title}</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div>
+                             {if $list.description != null and session('admin.status') !=1}
+                             <span style="color:red">内容已经加密</span>
+                             {else /}
+                             本文为公开内容
+                             {/if}
+                        </div>
+                        <div class="publish-info">
+                        	{assign name="classcontent" value=":$list.class_id"}
+                        	{class sqlstr="class_id=$classcontent"}
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>{$list.create_time|date="Y年m月d日"}
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="{$class.url}" class="post-category">
+                                    {$class.class_name}
+                                </a>
+                                {/class}
+                                
+                            </span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+           {/list} 
+            
+
+     
+            
+        </div>
+    </article>
+</main>
+
+{include file="sqlsec/footer" /}   

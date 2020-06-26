@@ -1,0 +1,87 @@
+
+{include file="sqlsec/header" /}  
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  {include file="sqlsec/cata" /}  
+  
+</ul>
+
+{include file="sqlsec/catanext" /}  
+
+        </div>
+    </nav>
+
+</header>
+
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+{include file="sqlsec/middle" /}  
+    </div>
+</div>
+
+<main class="content">
+
+    
+
+<div id="category-cloud" class="container chip-container">
+    <div class="card">
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;搜索结果
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+  <article id="articles" class="container articles">
+        <div class="row tags-posts">
+        	
+{query  table="content" field="title,pic,class_id,content_id,create_time" sqlstr="$where"}
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/index/view/{$query.content_id}.html">
+                        <div class="card-image tag-image">
+                            
+                            <img src="https://image.3001.net/images/20200304/15832956271308.jpg" class="responsive-img" alt="{$query.title}">
+                            
+                            <span class="card-title">{$query.title}</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                        </div>
+                        <div class="publish-info">
+                        	{assign name="classcontent" value=":$query.class_id"}
+                        	{class sqlstr="class_id=$classcontent"}
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>{$query.create_time|date="Y年m月d日"}
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="{$class.url}" class="post-category">
+                                    {$class.class_name}
+                                </a>
+                                {/class}
+                                
+                            </span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+           {/query} 
+            
+
+     
+            
+        </div>
+    </article>
+</main>
+
+{include file="sqlsec/footer" /}   

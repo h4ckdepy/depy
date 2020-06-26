@@ -1,0 +1,134 @@
+
+ <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>depyseve | 小北</title>
+    <meta name="keywords" content="小北">
+    <meta name="description" content="小北的depyseve">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link href="{:config('depyseve.site_staticurl')}/depy/animate.min.css" rel="stylesheet">
+    <link href="{:config('depyseve.site_staticurl')}/depy/bootstrap.sketchy.min.css" rel="stylesheet">
+    <link href="{:config('depyseve.site_staticurl')}/depy/reward.css" rel="stylesheet">
+    <link href="{:config('depyseve.site_staticurl')}/depy/all.css" rel="stylesheet">
+    <script async src="{:config('depyseve.site_staticurl')}/depy/busuanzi.pure.mini.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="https://blog.happysec.cn">
+            <img height="30px" alt="logo" src="{:config('depyseve.site_logo')}">
+            小北
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="navbar-collapse collapse" id="navbarColor03">
+            <ul class="nav navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://blog.happysec.cn">首页</a>
+                </li>
+                
+                
+                {class sqlstr="pid=23"}
+                <li class="nav-item">
+                    <a class="nav-link" href="{$class.url}">{$class.class_name}</a>
+                </li>
+				 {/class}   
+				 
+                <li class="nav-item">
+                    <a class="nav-link" href="/index/link">友情链接</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/index/contact">关于</a>
+                </li>
+          </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+        	
+            <!--<div class="col-md-3 col-xs-12 col-sm-12 animated bounceInLeft">-->
+            <!--    <div class="ibox float-e-margins">-->
+            <!--        <div class="ibox-title">-->
+            <!--            <span class="label pull-right"><i class="fas fa-user" style="zoom: 2;"></i></span>-->
+            <!--            <h5>depyseve用户量</h5>-->
+            <!--        </div>-->
+            <!--        <div class="ibox-content">-->
+            <!--            <h1 class="no-margins">-->
+            <!--                <span  class="text-show"></span>-->
+            <!--            </h1>-->
+            <!--        </div>-->
+            <!--    </div>-->
+            <!--</div>-->
+
+        </div>
+        <div class="jumbotron">
+          <h1 class="display-3">Depyseve!</h1>
+{sig id="2"/}
+        </div>
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#list">购买</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#dashang">购买方式</a>
+            </li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade active show" id="list">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">购买者 ID</th>
+                            <th scope="col">Channel</th>
+                            <th scope="col">Money</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">L1**0</th>
+                            <td class="text-weixin">微信</td>
+                            <td class="text-danger">￥188.00</td>
+                            <td>2020-06-21</td>
+                        </tr>
+                         <tr>
+                            <th scope="row">lin**</th>
+                            <td class="text-weixin">微信</td>
+                            <td class="text-danger">￥188.00</td>
+                            <td>2020-06-21 </td>
+                        </tr>
+                         <tr>
+                            <th scope="row">陈**</th>
+                            <td class="text-aliplay">支付宝</td>
+                            <td class="text-danger">￥188.00</td>
+                            <td>2020-06-18 </td>
+                        </tr>
+                         <tr>
+                            <th scope="row">赵**</th>
+                            <td class="text-weixin">微信</td>
+                            <td class="text-danger">￥188.00</td>
+                            <td>2020-06-17 </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tab-pane fade" id="dashang">
+                <center>
+                	<br>
+					购买请联系<br>
+					QQ:18652465<br>
+					微信:depy_seve<br>
+					同时接各类业务,包括安全维护、开发等(暂不接小程序单)
+                </center>
+                <br>
+
+            </div>
+        </div>
+    </div>
+    <script src="{:config('depyseve.site_staticurl')}/depy/jquery-2.2.0.min.js"></script>
+    <script src="{:config('depyseve.site_staticurl')}/depy/bootstrap.min.js"></script>
+</body>
+</html>

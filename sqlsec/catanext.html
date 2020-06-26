@@ -1,0 +1,60 @@
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head header-bg-color">
+        
+        <img src="{:config('depyseve.site_staticurl')}/depy/logo.png" class="logo-img circle responsive-img" style="margin-bottom:30px">
+        <br>
+        
+        <div class="logo-name">{:config('depyseve.site_title')}</div>
+        <div class="logo-desc">
+            {:config('depyseve.typedcode')}
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			首页
+		</a>
+          
+        </li>
+        {class sqlstr="pid=23"}
+        <li class="m-nav-item">
+	  
+		<a href="{$class.url}" class="waves-effect waves-light">
+			
+{$class.class_name}
+		</a>
+          
+        </li>
+         {/class}   
+         
+       <li class="m-nav-item">
+	  
+		<a href="/index/link" class="waves-effect waves-light">
+				友情链接
+		</a>
+          
+        </li>
+              <li class="m-nav-item">
+	  
+		<a href="/index/contact" class="waves-effect waves-light">
+				关于我
+		</a>
+          
+        </li>
+               <li class="m-nav-item">
+	  
+		<a href="/index/depyseve" class="waves-effect waves-light">
+				depyseve
+		</a>
+          
+        </li>       
+        
+    </ul>
+</div>
