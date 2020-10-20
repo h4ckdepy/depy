@@ -91,7 +91,7 @@ function CuteenTabs() {
 function CuteenAcc() {
   if (!$(".Cuteen_Accordion").children().children().hasClass("Cuteen_Accordion_text")) {
     $(".Cuteen_Accordion").each(function () {
-      $(this).find("li").first().addClass("default open");
+      //$(this).find("li").first().addClass("default open");
     });
   }
   $(function () {
